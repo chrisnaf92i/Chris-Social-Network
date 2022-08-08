@@ -1,0 +1,24 @@
+.Post{
+    width:80%;
+    margin:24px auto;
+    background-color: $secondaryBackgroundcolor;
+    box-shadow: $shadowColor;
+
+    border-radius: 10px;
+    padding:16px;
+    h1{
+        text-transform: capitalize;
+        font-size: 24px;
+    }
+    h2{
+        color:rgb(231, 231, 231);
+        font-size: 18px;
+    }
+
+    &__Header {
+        border-bottom: 1px solid white;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

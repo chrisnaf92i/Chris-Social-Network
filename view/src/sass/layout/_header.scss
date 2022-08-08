@@ -1,0 +1,18 @@
+.Header {
+    padding:32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__Nav {
+        display:flex;
+
+        a {
+            margin:8px;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
