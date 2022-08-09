@@ -110,7 +110,7 @@ a {
   padding: 32px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 .Header h1 {
   margin: 0;
@@ -119,11 +119,19 @@ a {
   display: flex;
   align-items: center;
 }
+.Header__Nav__Menu {
+  display: none;
+}
+@media (max-width: 800px) {
+  .Header__Nav__Menu {
+    display: block;
+  }
+}
 @media (max-width: 800px) {
   .Header__Nav {
     display: block;
-    text-align: end;
     position: sticky;
+    text-align: end;
   }
 }
 .Header__Nav__SubMenu {
@@ -134,14 +142,17 @@ a {
   .Header__Nav__SubMenu {
     display: none;
     padding: 8px;
-    background-color: rgba(132, 204, 255, 0.9);
-    z-index: 0;
+    background-color: rgb(132, 204, 255);
+    position: absolute;
+    right: 0%;
+    width: max-content;
+    border-radius: 10px;
   }
 }
 @media (max-width: 800px) {
   .Header__Nav:hover .Header__Nav__SubMenu {
     display: block;
-    border-radius: 10px;
+    border-radius: px;
   }
 }
 .Header__Nav a {

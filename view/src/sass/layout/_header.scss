@@ -2,29 +2,42 @@
     padding:32px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+
 
     h1 {
         margin:0;
     }
 
+
     &__Nav {
         display:flex;
         align-items: center;
+
+        &__Menu {
+            display:none;
+            @media (max-width:800px) {
+                display:block
+            }
+        }
+    
         @media (max-width:800px) {
             display: block;
-            text-align:end;
             position:sticky;
+            text-align: end;
         }
+        
         &__SubMenu {
             display: flex;
             align-items: center;
             @media (max-width:800px) {
                 display: none;
-                    padding:8px;
-                    background-color: rgba(132, 204, 255, 0.9);
-                    z-index:0;
-                
+                padding:8px;
+                background-color: rgb(132, 204, 255);
+                position:absolute;
+                right:0%;
+                width:max-content;
+                border-radius: 10px;
             }
             
         }
@@ -32,7 +45,7 @@
         @media (max-width:800px) {
             &:hover &__SubMenu {
                 display: block;
-                border-radius: 10px;
+                border-radius: px;
             }
         }
         a {

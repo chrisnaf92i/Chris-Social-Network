@@ -23,10 +23,10 @@ export default function Header() {
         <Link to="acceuil"><h1 className="Header__Title">My Social Network</h1></Link>
 
         <nav className='Header__Nav'>
-          {
-            onPhone ? <h2 className='Header__Nav__Menu'> <MenuOutlined /> </h2>: <Fragment/>
-          }
+          <h2 className='Header__Nav__Menu'> <MenuOutlined /> </h2>
+          
           <div className='Header__Nav__SubMenu'>
+            
             {!onPhone ? <Link to="/acceuil"> <h2> Acceuil </h2> </Link> : <Fragment/>}
             {
               localStorage.getItem("User") ? <Fragment> <Link to="/utilsateur"> <h2> Utilisateur </h2> </Link> <button onClick={logout}> <h2 > Déconnexion </h2> </button> </Fragment> : 
