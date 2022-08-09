@@ -1,18 +1,47 @@
 .Header {
     padding:32px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: flex-start;
+
+    h1 {
+        margin:0;
+    }
 
     &__Nav {
         display:flex;
+        align-items: center;
+        @media (max-width:800px) {
+            display: block;
+            text-align:end;
+            position:sticky;
+        }
+        &__SubMenu {
+            display: flex;
+            align-items: center;
+            @media (max-width:800px) {
+                display: none;
+                    padding:8px;
+                    background-color: rgba(132, 204, 255, 0.9);
+                    z-index:0;
+                
+            }
+            
+        }
 
+        @media (max-width:800px) {
+            &:hover &__SubMenu {
+                display: block;
+                border-radius: 10px;
+            }
+        }
         a {
             margin:8px;
-
             &:hover{
                 text-decoration: underline;
             }
+
+            
         }
     }
 }

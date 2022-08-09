@@ -109,11 +109,40 @@ a {
 .Header {
   padding: 32px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: flex-start;
+}
+.Header h1 {
+  margin: 0;
 }
 .Header__Nav {
   display: flex;
+  align-items: center;
+}
+@media (max-width: 800px) {
+  .Header__Nav {
+    display: block;
+    text-align: end;
+    position: sticky;
+  }
+}
+.Header__Nav__SubMenu {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 800px) {
+  .Header__Nav__SubMenu {
+    display: none;
+    padding: 8px;
+    background-color: rgba(132, 204, 255, 0.9);
+    z-index: 0;
+  }
+}
+@media (max-width: 800px) {
+  .Header__Nav:hover .Header__Nav__SubMenu {
+    display: block;
+    border-radius: 10px;
+  }
 }
 .Header__Nav a {
   margin: 8px;
